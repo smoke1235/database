@@ -1,6 +1,6 @@
 <?php
 
-namespace Smoke\Database\;
+namespace Smoke\Database;
 
 /**
  * A terribly useful class
