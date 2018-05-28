@@ -1,8 +1,6 @@
 {
     "name": "Smoke/Database",
     "autoload": {
-        "psr-4" : {
-            "Smoke\\Database\\" : "src"
-        }
+            "files": ["libs/bootstrap.php"]
     }
 }
