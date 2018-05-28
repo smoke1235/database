@@ -1,0 +1,8 @@
+{
+    "name": "database/database",
+    "autoload": {
+        "psr-0" : {
+            "Database\\Database" : "src"
+        }
+    }
+}
