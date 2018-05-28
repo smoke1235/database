@@ -1,7 +1,7 @@
 {
     "name": "database/database",
     "autoload": {
-        "psr-0" : {
+        "psr-4" : {
             "Database\\Database" : "src"
         }
     }
