@@ -2,7 +2,7 @@
     "name": "smoke/database",
     "autoload": {
         "psr-4" : {
-            "Smoke\\Database\\" : "src"
+            "Smoke\Database\\" : "src"
         }
     }
 }
