@@ -1,5 +1,5 @@
 {
-    "name": "smoke/database",
+    "name": "Smoke/Database",
     "autoload": {
         "psr-4" : {
             "Smoke\\Database\\" : "src"
