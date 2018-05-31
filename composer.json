@@ -1,6 +1,19 @@
 {
-    "name": "Smoke/Database",
+	
+	"name": "smoke/database",
+    "description": "dummy desc",
+    "authors": [
+        {
+            "name": "Dummy",
+            "email": "dummy@mail.com"
+        }
+    ],
     "autoload": {
-            "files": ["libs/bootstrap.php"]
+        "psr-4": {
+            "Smoke\\": "src/",
+			
+        }
+    },
+    "require": {
     }
 }
