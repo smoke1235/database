@@ -149,7 +149,7 @@ class DB
 		$query = "INSERT INTO $table ($keys) VALUES($values)";
 
 		// Execute the query and return the result
-		if (self::$driver->execute($query))
+		if ($this->driver->execute($query))
 		{
 			if (Validator::isObject($object) && method_exists($object, '__afterDBSave'))
 				$object->__afterDBSave();
@@ -228,7 +228,7 @@ class DB
 		$query = "INSERT INTO $table ($keys) VALUES ".implode(", ", $values)."";
 
 		// Execute the query and return the result
-		if (self::$driver->execute($query))
+		if ($this->driver->execute($query))
 		{
 			foreach ($data as $i => $object)
 			{
@@ -299,7 +299,7 @@ class DB
 		$query = "REPLACE INTO $table SET $values";
 
 		// Execute the query and return the result
-		if (self::$driver->execute($query))
+		if ($this->driver->execute($query))
 		{
 			if (Validator::isObject($object) && method_exists($object, '__afterDBSave'))
 				$object->__afterDBSave();
@@ -380,7 +380,7 @@ class DB
 		$query = "REPLACE INTO $table($keys) VALUES ".implode(", ", $values)."";
 
 		// Execute the query and return the result
-		if (self::$driver->execute($query))
+		if ($this->driver->execute($query))
 		{
 			foreach ($data as $i => $object)
 			{
@@ -445,7 +445,7 @@ class DB
 		$values = implode(",", $values);
 
 		$sql = "UPDATE $tables SET ".$values." WHERE ".$where;
-		$result = self::$driver->execute($sql);
+		$result = $this->driver->execute($sql);
 
 		if (Validator::isObject($object) && method_exists($object, '__afterDBSave'))
 			$object->__afterDBSave();
@@ -475,7 +475,7 @@ class DB
 
 		foreach($tables as $table){
 			$query = "DELETE FROM `$table` WHERE $where";
-			if (self::$driver->execute($query))
+			if ($this->driver->execute($query))
 				$affected += $this->affectedRows();
 		}
 
@@ -494,7 +494,7 @@ class DB
 	{
 		//$timer = Debug::startTimer('query', 'DB->SelectRows: '.$query);
 
-		$resultset = $this->execute($query);
+		$resultset = $this->driver->execute($query);
 		if ($resultset === false)
 		{
 			//Debug::stopTimer($timer);
@@ -538,7 +538,7 @@ class DB
 		//$timer = Debug::startTimer('query', 'DB->SelectRow: '.$query);
 
 
-		$resultset = self::$driver->execute($query);
+		$resultset = $this->driver->execute($query);
 		if ($resultset === false)
 		{
 			//Debug::stopTimer($timer);
@@ -581,7 +581,7 @@ class DB
 		if (!Validator::isString($class))
 			$class = "stdClass";
 
-		$resultset = self::$driver->execute($query);
+		$resultset = $this->driver->execute($query);
 		if ($resultset === false)
 		{
 			//Debug::stopTimer($timer);
@@ -633,7 +633,7 @@ class DB
 
 		$object = new $class();
 
-		$resultset = self::$driver->execute($query);
+		$resultset = $this->driver->execute($query);
 		if ($resultset === false)
 		{
 			//Debug::stopTimer($timer);
@@ -676,7 +676,7 @@ class DB
 	{
 		//$timer = Debug::startTimer('query', 'DB->selectValue: '.$query);
 
-		$resultset = self::$driver->execute($query);
+		$resultset = $this->driver->execute($query);
 		if ($resultset === false)
 		{
 			//Debug::stopTimer($timer);
@@ -728,7 +728,7 @@ class DB
 	{
 		//$timer = Debug::startTimer('query', 'DB->SelectValues: '.$query);
 
-		$resultset = self::$driver->execute($query);
+		$resultset = $this->driver->execute($query);
 		if ($resultset === false)
 		{
 			//Debug::stopTimer($timer);
