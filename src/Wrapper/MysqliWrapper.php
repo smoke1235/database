@@ -2,7 +2,7 @@
 
 namespace Smoke\Wrapper;
 
-class MysqliWrapper extends MySQLi
+class MysqliWrapper extends \MySQLi
 {
 	protected static $instance;
 	protected $debugNextQuery = false;
