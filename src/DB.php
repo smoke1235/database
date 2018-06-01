@@ -23,7 +23,7 @@ class DB
 			$this->prefix = $options[ 'prefix' ];
 		}
 
-		switch (self::$type)
+		switch ($this->type)
 		{
 			case 'mysqli':
 			case 'mysql':
