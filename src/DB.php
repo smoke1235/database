@@ -8,7 +8,7 @@ class DB
 	private $prefix = "";
 
 
-	protected static $driver;
+	protected $driver;
 	protected static $instance;
 
 	private function __construct($options)
@@ -44,7 +44,7 @@ class DB
 		$fun = "getInstance";
 		echo $dsn;
 
-		//self::$driver = $dsn::$fun($attr);
+		$this->driver = $dsn::$fun($attr);
 
 	}
 
