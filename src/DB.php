@@ -40,7 +40,7 @@ class DB
 		$driver = $this->type;
 		unset($attr[ 'driver' ]);
 
-		$dsn = ucfirst($driver) . 'Wrapper';
+		$dsn = "Smoke\Wrapper\". ucfirst($driver) . 'Wrapper';
 		$fun = "getInstance";
 		echo $dsn;
 
