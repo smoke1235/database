@@ -11,7 +11,7 @@ class DB
 	protected static $driver;
 	protected static $instance;
 
-	private function __construct()
+	private function __construct($options)
 	{
 
 		if (isset($options[ 'database_type' ]))
