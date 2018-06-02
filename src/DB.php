@@ -42,7 +42,7 @@ class DB
 
 		$dsn = "Smoke\\Wrapper\\". ucfirst($driver) . 'Wrapper';
 		$fun = "getInstance";
-		echo $dsn;
+		
 
 		$this->driver = $dsn::$fun($attr);
 
