@@ -11,9 +11,7 @@ class MysqliWrapper extends \MySQLi
 
 	public function __construct($options) {
 
-		print_r($options);
-
-        // turn of error reporting
+		// turn of error reporting
         //mysqli_report(MYSQLI_REPORT_OFF);
 
         // connect to database
