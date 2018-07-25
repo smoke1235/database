@@ -764,5 +764,34 @@ class DB
 
 		return $result;
 	}
+	
+	/**
+	 * Get the current query object or a new DatabaseQuery object.
+	 *
+	 * @param   boolean  $new  False to return the current query object, True to return a new DatabaseQuery object.
+	 *
+	 * @return  DatabaseQuery  The current query object or a new object extending the DatabaseQuery class.
+	 *
+	 * @since   1.0
+	 * @throws  \RuntimeException
+	 */
+	public function getQuery($new = false)
+	{
+		if ($new)
+		{
+		    
+			// Derive the class name from the driver.
+			$class = 'Smoke\\Wrapper\\' . ucfirst($this->type) . '\\' . ucfirst($this->type) . 'Query';
+			// Make sure we have a query class for this driver.
+			if (!class_exists($class))
+			{
+				// If it doesn't exist we are at an impasse so throw an exception.
+				throw new Exception\UnsupportedAdapterException('Database Query Class not found.');
+			}
+			return new $class($this);
+		}
+		return $this->sql;
+	}
+
 
 }
