@@ -6,11 +6,11 @@
  * @license    GNU General Public License version 2 or later; see LICENSE
  */
 
-namespace Joomla\Database\Mysqli;
+namespace Smoke\Wrapper;
 
-use Joomla\Database\DatabaseQuery;
-use Joomla\Database\Query\LimitableInterface;
-use Joomla\Database\Query\PreparableInterface;
+use Smoke\DatabaseQuery;
+use Smoke\Query\LimitableInterface;
+use Smoke\Query\PreparableInterface;
 
 /**
  * MySQLi Query Building Class.
