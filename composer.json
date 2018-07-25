@@ -1,11 +1,11 @@
 {
 	
-	"name": "smoke/database",
+	"name": "smoke1235/smokedb",
     "description": "dummy desc",
     "authors": [
         {
-            "name": "Dummy",
-            "email": "dummy@mail.com"
+            "name": "Peter Donders",
+            "email": "oranjepeter@hotmail.com"
         }
     ],
     "autoload": {
