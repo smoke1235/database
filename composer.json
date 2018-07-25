@@ -2,6 +2,9 @@
 	
 	"name": "smoke1235/smokedb",
     "description": "dummy desc",
+	
+"type": "library",
+  "license": "MIT",
     "authors": [
         {
             "name": "Peter Donders",
