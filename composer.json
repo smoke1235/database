@@ -1,22 +1,17 @@
 {
-	
-	"name": "smoke1235/smokedb",
-    "description": "dummy desc",
-	
-"type": "library",
-  "license": "MIT",
+    "name": "smoke1235/smokedb",
+    "description": "dummy desc",	
+    "type": "library",
+    "license": "MIT",
     "authors": [
-        {
-            "name": "Peter Donders",
-            "email": "oranjepeter@hotmail.com"
-        }
+    {
+        "name": "Peter Donders",
+        "email": "oranjepeter@hotmail.com"
+    }
     ],
     "autoload": {
         "psr-4": {
-            "Smoke\\": "src/"
-			
-        }
-    },
-    "require": {
+            "Smoke\\Database\\": "src/"
+	}
     }
 }
