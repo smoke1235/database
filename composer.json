@@ -1,5 +1,5 @@
 {
-    "name": "Donders/Databas",
+    "name": "donders/database",
     "description": "dummy desc",	
     "type": "library",
     "license": "MIT",
